@@ -1,0 +1,17 @@
+
+<div class="bg-dark text-white my-2 ">
+    <div class="d-flex  w-100 justify-content-around ">
+        <div class="w-50  my-2 ">
+            <p>QuoteAuthor: <span [ngStyle]="{'color':'greenyellow'}">{{quoteInfo.quoteAuthor}}</span></p>
+            <p>PostedBy: <span [ngStyle]="{'color':'greenyellow'}">{{quoteInfo.quotePoster}}</span></p>
+    
+        </div>
+        <div class="w-25  my-2">
+            <p>likes: <span [ngStyle]="{'color':'greenyellow'}">{{quoteInfo.upVote}}</span></p>
+            <p>Dislikes: <span [ngStyle]="{'color':'greenyellow'}">{{quoteInfo.downVote}}</span></p>
+    
+        </div>
+        
+    </div>
+    <button (click)="goalRead(true)" [ngStyle]="{'backgroundColor':'greenyellow'}" class="btn ms-4 mb-2">deleteQuote</button>
+</div>
