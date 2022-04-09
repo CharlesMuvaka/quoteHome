@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,6 +20,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule 
   
     
   ],
