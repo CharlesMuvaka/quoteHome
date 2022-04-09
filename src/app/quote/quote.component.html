@@ -1,12 +1,13 @@
-<div class="container">
+<div class="container ">
     <div class="row">
         <div class="col-md-6">
             <p class="text-center my-4">Enjoy some of our greatest quotes to brighten up your day</p>
-            <div class="card" *ngFor="let quote of quotes">
+            <div class="card my-2" *ngFor="let quote of quotes; let i = index">
                 <h4 class="card-title text-center" [ngStyle]="{'color':'greenYellow'}">{{quote.quoteName}}</h4>
                 <div class="card-body">
                     <p>{{quote.quoteDesc}}</p>
-                    <button class="btn btn-primary">more info</button>
+                    <app-quote-details [quoteInfo]="quote" *ngIf="quote.showDetails" (deleteGoal)="goalDeleted($event, i)"></app-quote-details>
+                    <button class="btn btn-dark" (click)="toggleQuoteDetails(i)">See more</button>
                 </div>
                 
             </div>
@@ -29,27 +30,8 @@
                   </div>
 
             </div>
-            <form class="bg-dark text-white mt-1">
-                <p>Fill in the form to brighten up other people with great quotes</p>
-                <div class="form-group m-2">
-                    <label for="name">Enter your Name</label>
-                    <input type="text" id="name" class="form-control w-75">
-                </div>
-                <div class="form-group m-2">
-                    <label for="name">Enter your Name</label>
-                    <input type="text" id="name" class="form-control w-75">
-                </div>
-                <div class="form-group m-2">
-                    <label for="name">Enter your Name</label>
-                    <input type="text" id="name" class="form-control w-75">
-                </div>
-                <div class="form-group m-2">
-                    <label for="name">Enter your Name</label>
-                    <input type="text" id="name" class="form-control w-75">
-                </div>
-                <button class="btn btn-primary m-3">submit</button>
-            </form>
             
+            <app-form></app-form>
         
         </div>
     </div>
