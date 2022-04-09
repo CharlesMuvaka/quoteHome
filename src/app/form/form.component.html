@@ -1,20 +1,28 @@
-<form class="bg-secondary text-white mt-1 rounded">
-    <h4 class="text-center" [ngStyle]="{'color':'yellowgreen'}">Fill in the form to publish your quotes</h4>
-    <div class="form-group m-2">
-        <label for="name">Enter your Name</label>
-        <input type="text" id="name" class="form-control w-75">
-    </div>
-    <div class="form-group m-2">
-        <label for="title">Enter the title of your quote</label>
-        <input type="text" id="title" class="form-control w-75">
-    </div>
-    <div class="form-group m-2">
-        <label for="description">Enter the descritpion of your quote</label>
-        <textarea type="text" rows="4" id="description" class="form-control w-75"></textarea>
-    </div>
-    <div class="form-group m-2">
-        <label for="howOld">select the day it was created</label>
-        <input type="date" id="howOld" class="form-control w-50">
-    </div>
-    <button class="btn btn-primary m-3">submit</button>
-</form>
+<div class="bg-secondary text-white mt-1 rounded">
+    <form (ngSubmit)="passUserQuote()" #myform="ngForm">
+
+        <h4 class="text-center my-3" [ngStyle]="{'color':'yellowgreen'}">Fill in the form to publish your quotes</h4>
+
+        <div class="form-group m-2">
+            <label for="name">Enter your Name</label>
+            <input type="text" id="name" name="quotePoster"class="form-control w-75" [(ngModel)]="userQuote.quotePoster">
+        </div>
+        <div class="form-group m-2">
+            <label for="title">Enter the title of your quote</label>
+            <input type="text" id="title" name="quoteName" class="form-control w-75" [(ngModel)]="userQuote.quoteName">
+        </div>
+        <div class="form-group m-2">
+            <label for="description">Enter Author of the quote</label>
+            <input type="text" id="description" name="quoteAuthor" class="form-control w-75" [(ngModel)]="userQuote.quoteAuthor">
+        </div>
+        <div class="form-group m-2">
+            <label for="description">Enter the descritpion of your quote</label>
+            <textarea type="text" rows="4" name="quoteDesc" id="description" class="form-control w-75" [(ngModel)]="userQuote.quoteDesc"></textarea>
+        </div>
+        <div class="form-group m-2">
+            <label for="howOld">select the day it was created</label>
+            <input type="date" id="howOld" name="created" class="form-control w-50" [(ngModel)]="userQuote.created">
+        </div>
+        <button class="btn btn-primary m-3"  >submit</button>
+    </form>
+</div>
