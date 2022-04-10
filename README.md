@@ -101,7 +101,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  <p>If you find any bug, open an issue <a href="https://github.com/CharlesMuvaka12345/quoteHome/issues">here</a> by including your search query and the expected result.</p>
  <p>Any suggestions or corrections to the code would highly be appreciated</p>
 
-  * link to live site: 
+  * link to live site: https://charlesmuvaka12345.github.io/quoteHome/
 
  ## Reference
  * Materialize CSS
