@@ -13,5 +13,8 @@
         </div>
         
     </div>
-    <button (click)="goalRead(true)" [ngStyle]="{'backgroundColor':'greenyellow'}" class="btn ms-4 mb-2">deleteQuote</button>
+    <div class="d-flex justify-content-between" >
+        <button (click)="goalRead(true)" [ngStyle]="{'backgroundColor':'greenyellow'}" class="btn ms-4 mb-2">deleteQuote</button>
+        <p class="me-3">This quote is <span [ngStyle]="{'color':'greenyellow'}"> {{quoteInfo.created|quoteAge}}</span>days old.</p>
+    </div>
 </div>
